@@ -36,24 +36,17 @@ public class MyArray {
         }
     }
 
-    //сортирует массив следующим образом: вначале отрицательные повозрастанию
-    //затем положительные по убыванию. Время O(n), требует много дополнительной памяти O(range).
-    public void sort2(){
-        int[]adArray= new int[range*2+1];
-        for (int i = 0; i < arr.length; i++) {
-            adArray[arr[i]+range]++;
-        }
-        int j=0;
-        for (int i = 0; i < adArray.length/2; i++) {
-                for (int k = 0; k <adArray[i]; k++) {
-                    arr[j++]=i-range;
-                }
-        }
-        for (int i = adArray.length-1; i >= adArray.length/2; i--) {
-                for (int k = 0; k <adArray[i]; k++) {
-                    arr[j++]=i-range;
-                }
-        }
+    //сортирует массив следующим образом: сначала отрицательные,
+    //затем положительные. Время O(n).
 
+    public void sort2(){
+        int indexPos=arr.length-1;
+        int indexNeg=0;
+        int[] res = new int[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            if(arr[i]<0)res[indexNeg++]= arr[i];
+            else res[indexPos--]=arr[i];
+        }
+        arr=res;
     }
 }
