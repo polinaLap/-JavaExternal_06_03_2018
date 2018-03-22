@@ -1,5 +1,6 @@
 package com.company;
-public class Line extends Figure {
+public class Line extends Figure  {
+    private static final long serialVersionUID = 1L;
     private Point begin;
     private Point end;
 

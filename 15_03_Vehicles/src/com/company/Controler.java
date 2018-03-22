@@ -54,9 +54,27 @@ public class Controler {
         ships.sortByPrice();
         return ships;
     }
-    public static void print(VehicleArray vehicles){
+    public static void print(VehicleArray vehicles, int mode){
         for (int i = 0; i <vehicles.length() ; i++) {
             System.out.println(vehicles.getVehicle(i).toString());
+            if(mode!=0){
+                if(vehicles.getVehicle(i) instanceof ISwim) {((ISwim)(vehicles.getVehicle(i))).swim();}
+                else if(vehicles.getVehicle(i) instanceof IFly) { ((IFly)(vehicles.getVehicle(i))).fly();}
+                else if(vehicles.getVehicle(i) instanceof IMove) { ((IMove)(vehicles.getVehicle(i))).move();}
+            }
         }
+    }
+
+    public static VehicleArray[] sortByInterfaces(VehicleArray vehicles){
+        VehicleArray [] res = new VehicleArray[3];
+        res[0] = new VehicleArray();
+        res[1] = new VehicleArray();
+        res[2] = new VehicleArray();
+        for (int i = 0; i <vehicles.length() ; i++) {
+            if(vehicles.getVehicle(i) instanceof ISwim) { res[0].Add(vehicles.getVehicle(i));}
+            else if(vehicles.getVehicle(i) instanceof IFly) { res[1].Add(vehicles.getVehicle(i));}
+            else if(vehicles.getVehicle(i) instanceof IMove) { res[2].Add(vehicles.getVehicle(i));}
+        }
+        return res;
     }
 }

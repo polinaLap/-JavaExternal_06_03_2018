@@ -1,3 +1,5 @@
 package com.company;
 
-public abstract class Figure {}
+import java.io.Serializable;
+
+public abstract class Figure implements Serializable{}

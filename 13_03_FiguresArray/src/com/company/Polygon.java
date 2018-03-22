@@ -2,6 +2,7 @@ package com.company;
 import java.util.Arrays;
 
 public class Polygon extends Figure {
+    private static final long serialVersionUID = 1L;
     private Point[] points;
 
     public Polygon(Point[] points) {
@@ -14,5 +15,9 @@ public class Polygon extends Figure {
         return "Polygon{" +
                 "points=" + Arrays.toString(points) +
                 '}';
+    }
+
+    public Point[] getPoints() {
+        return points;
     }
 }

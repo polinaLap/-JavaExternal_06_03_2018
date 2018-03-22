@@ -1,5 +1,6 @@
 package com.company;
 public class CPoint extends Point {
+    private static final long serialVersionUID = 1L;
     private String color;
 
     public CPoint(int x, int y, String color) {

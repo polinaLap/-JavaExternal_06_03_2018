@@ -1,6 +1,7 @@
 package com.company;
 
 public class Point extends Figure{
+    private static final long serialVersionUID = 1L;
     private int x,y;
     public Point(int x, int y){
         this.x=x;

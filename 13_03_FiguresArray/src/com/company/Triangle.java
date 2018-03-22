@@ -1,6 +1,7 @@
 package com.company;
 
 public class Triangle extends Figure {
+    private static final long serialVersionUID = 1L;
     private Point a, b, c;
     private Line ab, ac, bc;
 
@@ -27,10 +28,14 @@ public class Triangle extends Figure {
 
     @Override
     public String toString() {
-        return "Triangle{" +
+        String res= "Triangle{" +
                 "A=" + a +
                 ", B=" + b +
-                ", C=" + c +
-                '}';
+                ", C=" + c;
+        if(ab!=null) res+="AB="+ab;
+        if(bc!=null) res+="BC="+bc;
+        if(ac!=null) res+="AC="+ac;
+        res+='}';
+        return res;
     }
 }

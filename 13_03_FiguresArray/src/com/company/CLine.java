@@ -1,6 +1,6 @@
 package com.company;
 public class CLine extends Line {
-
+    private static final long serialVersionUID = 1L;
     private String color;
 
     public CLine(Point begin, Point end, String color) {

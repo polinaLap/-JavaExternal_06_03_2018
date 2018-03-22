@@ -1,6 +1,6 @@
 package com.company;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Comparable<Vehicle> {
     private double x, y;
     private double price,speed;
     private int year;
@@ -15,9 +15,18 @@ public abstract class Vehicle {
         this(0,0,0,0,0);
     }
 
+
     @Override
     public abstract String toString();
 
+    @Override
+    public int compareTo(Vehicle vehicle) {
+        return ((Double)speed).compareTo(vehicle.speed);
+    }
+
+    public abstract class Engine{
+        int type;//5-strongest type, 0-weekest
+    }
     public double getX() {
         return x;
     }
@@ -36,5 +45,13 @@ public abstract class Vehicle {
 
     public int getYear() {
         return year;
+    }
+
+    public void setSpeed(double speed) {
+        this.speed = speed;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
     }
 }
