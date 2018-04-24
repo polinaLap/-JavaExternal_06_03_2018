@@ -1,44 +1,15 @@
 package javaclasses;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
-import java.io.File;
-import java.io.Serializable;
-
+import org.junit.Test;
+import junit.framework.Assert;
 import java.io.InvalidObjectException;
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
+    extends Assert
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
-    }
+    @Test
     public void testRegisterObserver(){
         Abonent a = new Abonent();
         Tarif t = new PatriotTarif(0,0,0);
@@ -47,6 +18,7 @@ public class AppTest
         assertEquals(expCount,count);
 
     }
+    @Test
     public void testNotifyObservers(){
         Abonent a = new Abonent();
         Tarif t = new PatriotTarif(0,0,0);
@@ -55,6 +27,7 @@ public class AppTest
         int expCount =100; int count = a.countOfMb;
         assertEquals(expCount,count);
     }
+    @Test
     public void testRemoveObservers(){
         Abonent a = new Abonent();
         Tarif t = new PatriotTarif(0,0,0);
@@ -63,31 +36,35 @@ public class AppTest
         int expCount =0; int count = t.abonentsCount();
         assertEquals(expCount,count);
     }
+    @Test
     public void testCountSMSInPlusSMS(){
         Tarif t1 = new PatriotTarif(0,100,0);
         Tarif t2=new PlusSMS(t1,100);
         int expCount =200; int count = t2.getCountSMS();
         assertEquals(expCount,count);
     }
+    @Test
     public void testCostInPlusSMS(){
         Tarif t1 = new PatriotTarif(0,100,0);
         Tarif t2=new PlusSMS(t1,100);
         double expCost =160; double cost = t2.cost();
         assertEquals(expCost,cost,0.000001);
     }
+    @Test
     public void testCountMbsInPlusMbs(){
         Tarif t1 = new PatriotTarif(100,0,0);
         Tarif t2=new PlusInternet(t1,100);
         int expCount =200; int count = t2.getCountMb();
         assertEquals(expCount,count);
     }
+    @Test
     public void testCostInPlusMbs(){
         Tarif t1 = new PatriotTarif(100,0,0);
         Tarif t2=new PlusInternet(t1,1000);
         double expCost =160; double cost = t2.cost();
         assertEquals(expCost,cost,0.000001);
     }
-
+    @Test
     public void testCostInInternationalTarif(){
         Tarif t = new InternationalTarif(0,0, 0,0,
                 new InternationalTarif.Countries[] {InternationalTarif.Countries.GERMANY,
@@ -95,12 +72,14 @@ public class AppTest
         double expCost =110; double cost = t.cost();
         assertEquals(expCost,cost,0.000001);
     }
+    @Test
     public void testTarifGeneratorIfIOutOfRange(){
         TarifGanerator g = new TarifGanerator();
         Tarif t = g.generateTarif(8);
         Tarif expTarif =null;
         assertEquals(expTarif,t);
     }
+    @Test
     public void testTarifsArrayAddMethod(){
         TarifsArray arr = new TarifsArray();
         Tarif t1 = new  PatriotTarif(0,0,0);
@@ -109,6 +88,7 @@ public class AppTest
         arr.add(t2);
         assertSame(t2,arr.getTarif(1));
     }
+    @Test
     public void testTarifsArraySetTarifMethod(){
         TarifsArray arr = new TarifsArray();
         Tarif t1 = new  PatriotTarif(0,0,0);
@@ -119,19 +99,14 @@ public class AppTest
         arr.setTarif(1,t3);
         assertSame(t3,arr.getTarif(1));
     }
+    @Test(expected = ArrayIndexOutOfBoundsException.class)
     public void testTarifsArrayGetTarifMethod(){
         TarifsArray arr = new TarifsArray();
         Tarif t1 = new  PatriotTarif(0,0,0);
         arr.add(t1);
-        Tarif res;
-        try{
-            res = arr.getTarif(1);
-            fail("Exception expected");
-
-        }catch (IndexOutOfBoundsException e){
-            System.out.println("pass\n");
-        }
+        arr.getTarif(1);
     }
+    @Test
     public void testTarifsArraySumOfAbonentsMethod(){
         TarifsArray arr = new TarifsArray();
         Tarif t1 = new  PatriotTarif(0,0,0);
@@ -147,6 +122,7 @@ public class AppTest
         int expCount =6; int count = arr.sumOfAbonents();
         assertEquals(expCount,count);
     }
+    @Test
     public void testTarifsArraySortAbonPlatu(){
         TarifGanerator gen = new TarifGanerator();
         TarifsArray arr = new TarifsArray(10);
@@ -160,6 +136,7 @@ public class AppTest
         }
         assertEquals(true,isOk);
     }
+    @Test
     public void testTarifsArraySelectMethod(){
         Tarif t1 = new PatriotTarif(50,100,100);
         Tarif t2 = new PatriotTarif(200,100,200);
@@ -171,6 +148,7 @@ public class AppTest
         TarifsArray res = arr.select(0,100,10,200,0,500,0,100);
         assertEquals(1,res.length());
     }
+    @Test
     public void testTarifsArraySelectByMbsMethod(){
         Tarif t1 = new PatriotTarif(50,100,100);
         Tarif t2 = new PatriotTarif(200,100,200);
@@ -181,6 +159,7 @@ public class AppTest
         TarifsArray res = arr.selectByMbs(0,150);
         assertEquals(3,res.length());
     }
+    @Test
     public void testSerializatorSimpleTarif(){
         Tarif t = new PatriotTarif(50,100,100);
         Serializator s = new Serializator();
@@ -196,6 +175,7 @@ public class AppTest
         assertEquals(t,res);
 
     }
+    @Test
     public void testSerializatorTarifWithAbonents(){
         Tarif t = new PatriotTarif(50,100,100);
         t.registerObserver(new Abonent());
@@ -211,6 +191,7 @@ public class AppTest
         }
         assertEquals(t,res);
     }
+    @Test
     public void testSerializatorTarifInternational(){
         Tarif t = new TarifGanerator().generateTarif(1);
         Serializator s = new Serializator();
@@ -225,7 +206,7 @@ public class AppTest
         }
         assertEquals(t,res);
     }
-
+    @Test
     public void testSerializatorFileNotFoundExceptionInSerialzation(){
         String file = "\\notExistedFolder\\ji.data";
         Tarif t = new TarifGanerator().generateTarif(1);
@@ -233,17 +214,10 @@ public class AppTest
         boolean isOk = s.serialization(t,file);
         assertEquals(false,isOk);
     }
-
-    public void testSerializatorInvalidObjectException(){
+    @Test(expected = InvalidObjectException.class)
+    public void testSerializatorInvalidObjectException() throws InvalidObjectException {
         String file = "src\\test\\java\\javaclasses\\testSerializatorInvalidObjectException.data";
         Serializator s = new Serializator();
-        Tarif res = null;
-        try{
-            res = s.deserialization(file);
-            fail("Exception expected");
-
-        }catch (InvalidObjectException e){
-            System.out.println("pass\n");
-        }
+        s.deserialization(file);
     }
 }

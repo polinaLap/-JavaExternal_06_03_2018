@@ -2,7 +2,6 @@ package com.company;
 
 public class Main {
 
-        static void test
         static  void testSortInterfaces(){
                 int n=10;
                 VehicleArray arr = new VehicleArray(n);

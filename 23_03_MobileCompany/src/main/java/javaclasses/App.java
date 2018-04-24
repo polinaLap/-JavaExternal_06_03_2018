@@ -2,10 +2,6 @@ package javaclasses;
 
 import java.io.InvalidObjectException;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
     public static void countOfAbonents(TarifsArray arr){
