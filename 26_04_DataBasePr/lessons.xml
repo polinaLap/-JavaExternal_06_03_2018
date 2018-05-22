@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lessons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.javacourses.ua/lessons"
+         xsi:schemaLocation="http://www.javacourses.ua/lessons lessons.xsd">
+    <lesson>
+        <id>1</id>
+        <name>Math</name>
+    </lesson>
+    <lesson>
+        <id>2</id>
+        <name>Ukr</name>
+    </lesson>
+    <lesson>
+        <id>3</id>
+        <name>Physics</name>
+    </lesson>
+    <lesson>
+        <id>4</id>
+        <name>Chemistry</name>
+    </lesson>
+    <lesson>
+        <id>5</id>
+        <name>Geography</name>
+    </lesson>
+</lessons>

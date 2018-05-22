@@ -1,0 +1,69 @@
+11:44:42,383  INFO main LessonDAO:addLesson:111 - Add lessonEnglish to shedule on Tuesday
+11:44:42,471  INFO main LessonDAO:removeSheduleLine:158 - Remove shedule line 20
+11:49:49,203 ERROR main LessonDAO:getConnection:17 - Login failed for user 'coursesJava'. ClientConnectionId:78ecddfb-06e8-45a2-a29a-228cc8c31e4a
+12:00:21,313 ERROR main LessonDAO:getConnection:17 - Login failed for user 'coursesJava'. ClientConnectionId:97b3bece-5f14-49fe-90d1-c815553b2480
+12:00:21,513 ERROR main LessonDAO:getConnection:17 - Login failed for user 'coursesJava'. ClientConnectionId:9a7b392e-ac68-4fe2-ac87-e83611988094
+12:01:06,693  INFO main LessonDAO:addLesson:115 - Add lesson English to shedule on Tuesday
+12:01:06,888  INFO main LessonDAO:removeSheduleLine:164 - Remove shedule line 20
+12:01:50,934  INFO main LessonDAO:addLesson:115 - Add lesson English to shedule on Tuesday
+12:01:51,560  INFO main LessonDAO:removeSheduleLine:164 - Remove shedule line 20
+12:03:00,309  INFO main LessonDAO:addLesson:115 - Add lesson English to shedule on Tuesday
+12:03:00,634  INFO main LessonDAO:removeSheduleLine:164 - Remove shedule line 20
+12:03:57,735 ERROR main LessonDAO:addLesson:118 - Invalid object name 'Sheule'.
+12:03:57,988  INFO main LessonDAO:removeSheduleLine:164 - Remove shedule line 20
+12:04:24,085  INFO main LessonDAO:addLesson:115 - Add lesson English to shedule on Tuesday
+12:04:24,284  INFO main LessonDAO:removeSheduleLine:164 - Remove shedule line 20
+12:04:32,361  INFO main LessonDAO:addLesson:115 - Add lesson English to shedule on Tuesday
+12:04:33,477  INFO main LessonDAO:removeSheduleLine:164 - Remove shedule line 20
+12:15:36,987  INFO main LessonDAO:addLesson:115 - Add lesson English to shedule on Tuesday
+12:15:37,800  INFO main LessonDAO:removeSheduleLine:164 - Remove shedule line 20
+12:53:56,647  INFO main LessonDAO:addLesson:116 - Add lesson English to shedule on Tuesday
+12:53:56,942  INFO main LessonDAO:removeSheduleLine:165 - Remove shedule line 20
+12:54:09,250  INFO main LessonDAO:addLesson:116 - Add lesson English to shedule on Tuesday
+12:54:09,261  INFO main LessonDAO:removeSheduleLine:165 - Remove shedule line 20
+14:30:28,117  INFO main LessonDAO:addLesson:116 - Add lesson English to shedule on Tuesday
+14:30:28,145  INFO main LessonDAO:removeSheduleLine:165 - Remove shedule line 20
+14:31:34,049  INFO main LessonDAO:addLesson:116 - Add lesson English to shedule on Tuesday
+14:31:34,158  INFO main LessonDAO:removeSheduleLine:165 - Remove shedule line 20
+14:46:54,000  INFO main LessonDAO:addLesson:59 - Add lesson newLesson to database.
+14:48:40,753  INFO main LessonDAO:addLesson:59 - Add lesson newLesson to database.
+14:48:41,095  INFO main LessonDAO:addLesson:119 - Add lesson English to shedule on Tuesday
+14:48:41,135  INFO main LessonDAO:removeSheduleLine:168 - Remove shedule line 20
+14:48:41,243  INFO main LessonDAO:setSheduleLine:145 - Set shedule line 19 with Mathematic on Monday
+12:07:30,477  INFO main LessonDAO:addLessonAndReturnMessage:132 - Add lesson English to shedule on Tuesday
+12:10:37,569  INFO main LessonDAO:addLessonAndReturnMessage:132 - Add lesson English to shedule on Tuesday
+12:19:13,022  INFO main LessonDAO:addLessonAndReturnMessage:136 - Add lesson English to shedule on Tuesday
+12:20:24,964 ERROR main LessonDAO:addLessonAndReturnMessage:139 - Incorrect syntax near the keyword 'into'..  Executing rollback to savepoint.
+12:35:59,098  INFO main LessonDAO:removeSheduleLines:229 - Remove shedule line with dayNumber=1 and lessonId=1
+12:35:59,145  INFO main LessonDAO:removeSheduleLines:229 - Remove shedule line with dayNumber=5 and lessonId=6
+12:49:40,832  INFO main LessonDAO:removeSheduleLines:229 - Remove shedule line with dayNumber=1 and lessonId=1
+12:49:40,881  INFO main LessonDAO:removeSheduleLines:229 - Remove shedule line with dayNumber=0 and lessonId=0
+12:50:16,658  INFO main LessonDAO:removeSheduleLines:229 - Remove shedule line with dayNumber=1 and lessonId=1
+12:50:16,756  INFO main LessonDAO:removeSheduleLines:229 - Remove shedule line with dayNumber=1 and lessonId=1
+15:43:00,241 ERROR main CreateXML:create:57 - data\lesson.xml (The system cannot find the path specified)
+16:53:53,900 ERROR main MarshalWrite:write:21 - 
+16:54:54,506 ERROR main MarshalWrite:write:21 - 
+17:04:23,544 ERROR main MarshalWrite:write:21 - Implementation of JAXB-API has not been found on module path or classpath.
+11:24:59,092 ERROR main MarshalWrite:write:21 - Implementation of JAXB-API has not been found on module path or classpath.
+11:43:15,633 ERROR main MarshalWrite:write:21 - Implementation of JAXB-API has not been found on module path or classpath.
+11:49:18,328 ERROR main MarshalWrite:write:21 - 1 counts of IllegalAnnotationExceptions
+11:50:01,530 ERROR main MarshalWrite:write:21 - 1 counts of IllegalAnnotationExceptions
+11:52:59,615 ERROR main MarshalWrite:write:21 - 1 counts of IllegalAnnotationExceptions
+11:53:15,373 ERROR main MarshalWrite:write:21 - 1 counts of IllegalAnnotationExceptions
+11:57:37,414 ERROR main MarshalWrite:write:21 - 2 counts of IllegalAnnotationExceptions
+12:04:02,509 ERROR main MarshalWrite:write:21 - 1 counts of IllegalAnnotationExceptions
+13:44:53,311 ERROR main ValidatorSAX:error:48 - 10 cvc-elt.1.a: Cannot find the declaration of element 'lessons'.
+13:44:53,331  INFO main ValidatorSAX:isValid:32 - lessons.xml is valid
+13:47:09,655 ERROR main ValidatorSAX:error:48 - 10 cvc-elt.1.a: Cannot find the declaration of element 'lessons'.
+13:47:09,761  INFO main ValidatorSAX:isValid:32 - lessons.xml is valid
+13:47:55,932 ERROR main ValidatorSAX:error:48 - 10 cvc-elt.1.a: Cannot find the declaration of element 'lessons'.
+13:48:08,565  INFO main ValidatorSAX:isValid:32 - lessons.xml is valid
+13:50:21,980 ERROR main ValidatorSAX:error:48 - 10 cvc-elt.1.a: Cannot find the declaration of element 'lessons'.
+13:50:22,013  INFO main ValidatorSAX:isValid:32 - lessons.xml is valid
+14:01:55,770 ERROR main ValidatorSAX:error:48 - 10 cvc-elt.1.a: Cannot find the declaration of element 'lessons'.
+14:01:55,785  INFO main ValidatorSAX:isValid:32 - lessons.xml is valid
+14:06:38,689 ERROR main ValidatorSAX:error:48 - 77 cvc-elt.1.a: Cannot find the declaration of element 'lessons'.
+14:06:38,711  INFO main ValidatorSAX:isValid:32 - lessons.xml is valid
+14:27:44,648 ERROR main ValidatorSAX:error:48 - 77 cvc-elt.1.a: Cannot find the declaration of element 'lessons'.
+14:27:44,732  INFO main ValidatorSAX:isValid:32 - lessons.xml is valid
+14:29:21,941 ERROR main ValidatorSAX:error:48 - 77 cvc-elt.1.a: Cannot find the declaration of element 'lessons'.
